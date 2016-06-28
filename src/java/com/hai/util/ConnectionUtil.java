@@ -15,13 +15,13 @@ import java.sql.SQLException;
  */
 public class ConnectionUtil {
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String url = "jdbc:mysql://localhost:3306/test";
+    private static final String url = "jdbc:mysql://nisarg10.cxppgnnqsffg.us-west-2.rds.amazonaws.com:3306/hai";
     public static Connection con = null;
 
     public static Connection getCon() {
         try {
             Class.forName(driver);
-            con = DriverManager.getConnection(url, "root", "nisarg");
+            con = DriverManager.getConnection(url, "nisarg", "nisarg10");
         } catch (ClassNotFoundException e) {
             System.out.println("Error in Class.forName " + e);
         } catch (SQLException e) {
